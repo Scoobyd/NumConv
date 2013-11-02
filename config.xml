@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "sk.ibolyamark.NumSystems"
+        versionCode="1" 
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Number System Converter and Manual</name>
+
+    <description>
+        Convert any number system to any other. Read the How To page, and learn it manually how to convert them.
+    </description>
+
+    <author href="http://evsum.com" email="ibolyamark7@gmail.com">
+        Ibolya Márk 
+    </author>
+         <preference name="permissions" value="none"/>
+        <preference name="android-minSdkVersion" value="7" />
+        <preference name="android-maxSdkVersion" value="18" />
+        <preference name="android-targetSdkVersion" value="18" />
+        <preference name="android-installLocation" value="auto" />
+        <icon src="icon.png" />
+
+</widget>
