@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Full Screen Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script src="code.js"></script>
+</head>
+
+<body>
+
+<div data-role="page">
+
+        <div data-role="header" data-position="fixed" data-fullscreen="true"><h1>Number system converter and manual</h1></div>
+        
+        
+                
+ <input type="button" id="pageBtn" onclick="window.location='/index.html';" value="Home">
+ <input type="button" id="pageBtn" onclick="window.location='#converter';" value="Converter">
+ <input type="button" id="pageBtn" onclick="window.location='/manual.html';" value="How to convert manually">
+            <div data-role="footer" data-position="fixed">
+             <div data-role="navbar">
+ <ul>
+ <li><a href="index.html" class="ui-btn- 
+ active">Home</a></li>
+ <li><a href="#converter" >Converter</a></li>
+ <li><a href="manual.html">Manual</a></li>
+ </ul>
+ </div>
+</div>
+            
+  
+        
+</div>
+
+    
+    <div data-role="page" id="converter">
+    <div data-role="header"><h1>Converter</h1></div>
+    <select id="from">
+        <option id="2">Base 2</option>
+        <option id="3">Base 3</option>
+        <option id="4">Base 4</option>
+        <option id="5">Base 5</option>
+        <option id="6">Base 6</option>
+        <option id="7">Base 7</option>
+        <option id="8">Base 8</option>
+        <option id="9">Base 9</option>
+        <option id="10" selected="selected">Base 10 (DEFAULT)</option>
+        <option id="11">Base 11</option>
+        <option id="12">Base 12</option>
+        <option id="13">Base 13</option>
+        <option id="14">Base 14</option>
+        <option id="15">Base 15</option>
+        <option id="16">Base 16</option>
+    </select>
+    <input type="text" id="textmezo" placeholder="The number you want to convert"/>
+        <button id="convert">Convert to:</button>
+         <select id="to">
+        <option id="2">Base 2</option>
+        <option id="3">Base 3</option>
+        <option id="4">Base 4</option>
+        <option id="5">Base 5</option>
+        <option id="6">Base 6</option>
+        <option id="7">Base 7</option>
+        <option id="8">Base 8</option>
+        <option id="9">Base 9</option>
+        <option id="10" selected="selected">Base 10 (DEFAULT)</option>
+        <option id="11">Base 11</option>
+        <option id="12">Base 12</option>
+        <option id="13">Base 13</option>
+        <option id="14">Base 14</option>
+        <option id="15">Base 15</option>
+        <option id="16">Base 16</option>
+    </select>
+        <div data-role="content" style="text-align:center"><h2><p class="result"></p></h2></div>
+       
+               <div data-role="footer" data-position="fixed">
+             <div data-role="navbar">
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="#converter"  class="ui-btn- 
+ active">Converter</a></li>
+ <li><a href="manual.html">Manual</a></li>
+ </ul>
+ </div>
+</div>
+    </div>
+</body>
+</html>

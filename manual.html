@@ -1,0 +1,231 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>First Mobile Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    </head>
+
+    <body>
+        <div data-role="page" id="converter">
+            <div data-role="header"><h1>Number systems - How To</h1></div>
+            <div data-role="content" style="text-align:center">
+                <h2>Positional number systems</h2>
+                <p>Our decimal number system is known as a positional number system, because the value of the number depends on the position of the digits. For example, the number 123 has a very different value than the number 321, although the same digits are used in both numbers.</p>
+                <p>(Although we are accustomed to our decimal number system, which is positional, other ancient number systems, such as the Egyptian number system were not positional, but rather used many additional symbols to represent larger values.)</p>
+                <p>In a positional number system, the value of each digit is determined by which place it appears in the full number. The lowest place value is the rightmost position, and each successive position to the left has a higher place value.</p>
+                <p>In our decimal number system, the rightmost position represents the "ones" column, the next position represents the "tens" column, the next position represents "hundreds", etc. Therefore, the number 123 represents 1 hundred and 2 tens and 3 ones, whereas the number 321 represents 3 hundreds and 2 tens and 1 one.</p>
+                <p>The values of each position correspond to powers of the base of the number system. So for our decimal number system, which uses base 10, the place values correspond to powers of 10:</p>
+                <p>
+                <table>
+                    <tr>
+                        <td>...</td>
+                        <td>1000</td>
+                        <td>100</td>
+                        <td>10</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>2<sup><b>3</b></sup></td>
+                        <td>2<sup><b>2</b></sup></td>
+                        <td>2<sup><b>1</b></sup></td>
+                        <td>2<sup><b>0</b></sup></td>
+                    </tr>
+                </table>
+            </p>
+            <h2>Converting from other number bases to decimal</h2>
+            <p>Other number systems use different bases. The binary number system uses base 2, so the place values of the digits of a binary number correspond to powers of 2. For example, the value of the binary number 10011 is determined by computing the place value of each of the digits of the number:</p>
+            <p>
+                <table>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2<sup><b>4</b></sup></td>
+                        <td>2<sup><b>3</b></sup></td>
+                        <td>2<sup><b>2</b></sup></td>
+                        <td>2<sup><b>1</b></sup></td>
+                        <td>2<sup><b>0</b></sup></td>
+                    </tr>
+                </table></p>
+            <p>So the binary number 10011 represents the value</p>
+            <p>
+                <table>
+                    <tr>
+                        <td colspan="2"> (1 * 2<sup><b>4</b></sup>)</td>
+                        <td>+</td>
+                        <td>(0 * 2<sup><b>3</b></sup>)</td>
+                        <td>+</td>
+                        <td>(0 * 2<sup><b>2</b></sup>)</td>
+                        <td>+</td>
+                        <td>(1 * 2<sup><b>1</b></sup>)</td>
+                        <td>+</td>
+                        <td>(1 * 2<sup><b>0</b></sup>)</td>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td>16</td>
+                        <td>+</td>
+                        <td>0</td>
+                        <td>+</td>
+                        <td>0</td>
+                        <td>+</td>
+                        <td>2</td>
+                        <td>+</td>
+                        <td>1</td>
+                    </tr>
+                     <tr>
+                        <td>=</td>
+                        <td colspan="9">19</td>
+                    </tr>
+                </table></p>
+            <p>The same principle applies to any number base. For example, the number 2132 base 5 corresponds to</p>
+            <p>
+                <table>
+                    <tr>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>number in base 5</td>
+                    </tr>
+                    <tr>
+                        <td>5<sup><b>3</b></sup></td>
+                        <td>5<sup><b>2</b></sup></td>
+                        <td>5<sup><b>1</b></sup></td>
+                        <td>5<sup><b>0</b></sup></td>
+                        <td>place values</td>
+                    </tr>
+                </table></p>
+            <p>So the value of the number is</p>
+            <p>
+                <table>
+                    <tr>
+                        <td colspan="2"> (2 * 5<sup><b>3</b></sup>)</td>
+                        <td>+</td>
+                        <td>(1 * 5<sup><b>2</b></sup>)</td>
+                        <td>+</td>
+                        <td>(3 * 5<sup><b>1</b></sup>)</td>
+                        <td>+</td>
+                        <td>(3 * 5<sup><b>0</b></sup>)</td>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td>(2 * 125)</td>
+                        <td>+</td>
+                        <td>(1 * 25)</td>
+                        <td>+</td>
+                        <td>(3 * 5)</td>
+                        <td>+</td>
+                        <td>(2 * 1)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>=</td>
+                        <td>250</td>
+                        <td>+</td>
+                        <td>25</td>
+                        <td>+</td>
+                        <td>15</td>
+                        <td>+</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td colspan="7">292</td>
+                    </tr>
+                </table></p>
+                <h2>Converting from decimal to other number bases</h2>
+            <p>In order to convert a decimal number into its representation in a different number base, we have to be able to express the number in terms of powers of the other base. For example, if we wish to convert the decimal number 100 to base 4, we must figure out how to express 100 as the sum of powers of 4.</p>
+            <p>
+                
+                 <table>
+                    <tr>
+                        <td>100</td>
+                        <td>=</td>
+                        <td>(1 * 64)</td>
+                        <td>+</td>
+                        <td>(2 * 16)</td>
+                        <td>+</td>
+                        <td>(1 * 4)</td>
+                        <td>+</td>
+                        <td>(0 * 1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">=</td>
+                        <td>(1 * 4<sup><b>3</b></sup>)</td>
+                        <td>+</td>
+                        <td>(2 * 4<sup><b>2</b></sup>)</td>
+                        <td>+</td>
+                        <td>(1 * 4<sup><b>1</b></sup>)</td>
+                        <td>+</td>
+                        <td>(0 * 4<sup><b>0</b></sup>)</td>
+                    </tr>
+                </table>
+                
+            </p>
+            <p>Then we use the coefficients of the powers of 4 to form the number as represented in base 4:</p>
+            <p>
+            <table>
+                <tr>
+                    <td>100</td>
+                    <td>=</td>
+                    <td>1210</td>
+                    <td>base 4</td>
+                </tr>
+            </table>
+            </p>
+            <p>One way to do this is to repeatedly divide the decimal number by the base in which it is to be converted, until the quotient becomes zero. As the number is divided, the remainders - in reverse order - form the digits of the number in the other base.</p>
+            <p>Example: Convert the decimal number 82 to base 6:</p>
+            <p>
+                
+                 <table>
+                <tr>
+                    <td>82/6</td>
+                    <td>=</td>
+                    <td>13</td>
+                    <td>remainder 4</td>
+                </tr>
+                <tr>
+                    <td>13/6</td>
+                    <td>=</td>
+                    <td>2</td>
+                    <td>remainder 1</td>
+                </tr>
+                <tr>
+                    <td>2/6</td>
+                    <td>=</td>
+                    <td>0</td>
+                    <td>remainder 2</td>
+                </tr>
+            </table>
+                
+            </p>
+            <p>The answer is formed by taking the remainders in reverse order:  2 1 4  base  6</p>
+            <div id="ad"><h2>Awesome math tricks and tips on Amazon:</h2>
+            <p>
+                
+<a href="http://www.amazon.com/gp/offer-listing/0307338401/ref=as_li_tf_il?ie=UTF8&camp=1789&creative=9325&creativeASIN=0307338401&linkCode=am2&tag=aromathera0e4-20"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0307338401&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=aromathera0e4-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=aromathera0e4-20&l=as2&o=1&a=0307338401" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+            </p></div>
+            </div>
+               <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+ <ul>
+ <li><a href="index.html">Home</a></li>
+ <li><a href="converter.html" >Converter</a></li>
+ <li><a href="manual.html"  class="ui-btn- 
+ active">Manual</a></li>
+ </ul>
+ </div>
+ </div>
+        </div>
+    </body>
+</html>
